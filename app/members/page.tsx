@@ -16,7 +16,7 @@ export default function MembersPage() {
           <div key={m.name} className={`card ${m.color}`}>
             <Image
               src="/mem_placeholder.png"
-              alt={members.name}
+              alt="Member Placeholder"
               width={250}
               height={200}
               className="w-full h-32 sm:h-40 md:h-48 lg:h-56 object-cover"
