@@ -48,7 +48,7 @@ export default function JourneyPage() {
         {
           name: "Vardaan",
           color: "text-purple-400",
-          img: "mem_placeholder.png",
+          img: "/assets/placeholder",
           desc: "Placeholder",
         },
       ],
