@@ -42,13 +42,13 @@ export default function JourneyPage() {
         {
           name: "Jastina",
           color: "text-green-400",
-          img: "/assets/placeholder,
+          img: "/assets/placeholder",
           desc: "Placeholder",
         },
         {
           name: "Vardaan",
           color: "text-purple-400",
-          img: "/assets/placeholder",
+          img: "mem_placeholder.png",
           desc: "Placeholder",
         },
       ],
