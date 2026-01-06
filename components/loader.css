@@ -1,0 +1,28 @@
+.loader {
+  display: flex;
+  gap: 9px;
+}
+
+.loader span {
+  width: 14px;
+  height: 14px;
+  background: #4ccd7d;
+  border-radius: 50%;
+  animation: bounce 1.54s infinite ease-in-out both;
+}
+
+.loader span:nth-child(1) {
+  animation-delay: -0.352s;
+}
+.loader span:nth-child(2) {
+  animation-delay: -0.176s;
+}
+
+@keyframes bounce {
+  0%, 80%, 100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+  }
+}
