@@ -11,6 +11,16 @@ export default function ShowcasePage() {
       file: "/assets/RatanTATA.pptx",
       image: "/assets/RatanTata.jpg",
     },
+    {
+      title: "Design Overview",
+      file: "/assets/design.pptx",
+      image: "/assets/mem_placeholder.png",
+    },
+    {
+      title: "Final Report",
+      file: "/assets/report.pptx",
+      image: "/assets/mem_placeholder.png",
+    },
   ];
 
   const filtered = assets.filter((a) =>
