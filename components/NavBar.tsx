@@ -9,8 +9,8 @@ export default function NavBar() {
       <div className="max-w-screen-xl mx-auto flex items-center justify-between p-4">
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-2">
-          <img src="/logo.png" alt="less3 Logo" className="h-8 w-8" />
-          <span className="text-white font-bold">less3</span>
+          <img src="/logo.png" alt="less³ Logo" className="h-8 w-8" />
+          <span className="text-white font-bold">less³</span>
         </Link>
 
         {/* Nav items */}
