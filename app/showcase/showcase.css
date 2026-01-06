@@ -6,7 +6,7 @@
   --focus-input-bg-color: transparent;
   --text-color: #949faa;
   --active-color: #1b9bee;
-  --width-of-input: 250px;
+  --width-of-input: 100%; /* full width on mobile */
   --inline-padding-of-input: 1.2em;
   --gap: 0.9rem;
 }
@@ -17,6 +17,7 @@
   gap: 0.5rem;
   align-items: center;
   width: var(--width-of-input);
+  max-width: 400px; /* cap width on larger screens */
   position: relative;
   isolation: isolate;
 }
@@ -131,14 +132,19 @@ input:-webkit-autofill:active {
   object-fit: cover;
 }
 
-.showcase-card::after {
-  content: "";
+/* bottom caption bar */
+.caption-bar {
   position: absolute;
-  inset: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   background: rgba(0, 0, 0, 0.7);
-  border-radius: inherit;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
-  z-index: 1;
+  backdrop-filter: blur(4px);
+  padding: 0.5rem 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 2;
 }
 
 .showcase-card:hover {
@@ -146,27 +152,47 @@ input:-webkit-autofill:active {
   box-shadow: 0 0 25px rgba(0, 150, 255, 0.6); /* blue glow */
 }
 
-.showcase-card > * {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-}
-
-.showcase-card h2 {
+.caption-bar h2 {
   color: #3b82f6; /* Tailwind blue-500 */
   font-weight: bold;
-  margin-bottom: 0.75rem;
+  margin: 0;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 0.9rem;
 }
 
-.showcase-card a {
-  display: inline-block;
-  padding: 0.5rem 1rem;
+.caption-bar a {
+  flex-shrink: 0;
+  margin-left: 0.5rem;
+  padding: 0.4rem 0.8rem;
   background: #2563eb; /* Tailwind blue-600 */
   color: #fff;
   border-radius: 0.375rem;
   transition: background 0.3s ease;
+  font-size: 0.8rem;
 }
 
-.showcase-card a:hover {
+.caption-bar a:hover {
   background: #1d4ed8; /* Tailwind blue-700 */
+}
+
+/* Responsive font scaling */
+@media (min-width: 640px) {
+  .caption-bar h2 {
+    font-size: 1rem;
+  }
+  .caption-bar a {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .caption-bar h2 {
+    font-size: 1.1rem;
+  }
+  .caption-bar a {
+    font-size: 1rem;
+  }
 }
