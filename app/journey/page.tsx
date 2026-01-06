@@ -64,4 +64,64 @@ export default function JourneyPage() {
       </div>
     </main>
   );
+  return (
+    <main className="p-6 bg-gray-900 text-white min-h-screen">
+      <h1 className="text-3xl font-bold mb-8">Our Journey</h1>
+
+      {/* Month card */}
+      <div className="mb-6">
+        {/* Outer rectangle */}
+        <button
+          onClick={() => setOpen(!open)}
+          className="w-full text-left px-6 py-3 bg-yellow-600 text-white font-semibold rounded shadow-lg hover:bg-red-700 transition"
+        >
+          January 2026
+        </button>
+
+        {/* Dropdown content */}
+        {open && (
+          <div className="mt-4 space-y-4">
+            {/* Member 1 */}
+            <div className="bg-gray-800 p-4 rounded shadow">
+              <h2 className="text-lg font-bold text-blue-400">Hemendra</h2>
+              <img
+                src="/assets/A.P.J ABDUL KALAM.png"
+                alt="Member A Presentation"
+                className="w-full max-w-md rounded mb-2"
+              />
+              <p className="text-gray-300">
+                Placeholder
+              </p>
+            </div>
+
+            {/* Member 2 */}
+            <div className="bg-gray-800 p-4 rounded shadow">
+              <h2 className="text-lg font-bold text-green-400">Jastina</h2>
+              <img
+                src="/assets/memberB_presentation.png"
+                alt="Member B Presentation"
+                className="w-full max-w-md rounded mb-2"
+              />
+              <p className="text-gray-300">
+                Placeholder
+              </p>
+            </div>
+
+            {/* Member 3 */}
+            <div className="bg-gray-800 p-4 rounded shadow">
+              <h2 className="text-lg font-bold text-purple-400">Vardaan</h2>
+              <img
+                src="/assets/RatanTata.jpg"
+                alt="Ratan Tata image"
+                className="w-full max-w-md rounded mb-2"
+              />
+              <p className="text-gray-300">
+                Placeholder
+                </p>
+            </div>
+          </div>
+        )}
+      </div>
+    </main>
+  );
 }
