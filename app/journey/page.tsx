@@ -36,19 +36,19 @@ export default function JourneyPage() {
         {
           name: "Hemendra",
           color: "text-blue-400",
-          img: "/assets/A.P.J ABDUL KALAM.png",
+          img: "/assets/placeholder",
           desc: "Placeholder",
         },
         {
           name: "Jastina",
           color: "text-green-400",
-          img: "/assets/memberB_presentation.png",
+          img: "/assets/placeholder,
           desc: "Placeholder",
         },
         {
           name: "Vardaan",
           color: "text-purple-400",
-          img: "/assets/RatanTata.jpg",
+          img: "/assets/placeholder",
           desc: "Placeholder",
         },
       ],
