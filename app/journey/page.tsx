@@ -25,7 +25,7 @@ export default function JourneyPage() {
             <div className="bg-gray-800 p-4 rounded shadow">
               <h2 className="text-lg font-bold text-blue-400">Hemendra</h2>
               <img
-                src="/assets/memberA_presentation.png"
+                src="/assets/A.P.J ABDUL KALAM.png"
                 alt="Member A Presentation"
                 className="w-full max-w-md rounded mb-2"
               />
