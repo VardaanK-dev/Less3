@@ -52,21 +52,31 @@ export default function ShowcasePage() {
         {filtered.map((a) => (
           <div
             key={a.title}
-            className="showcase-card border rounded-lg shadow p-4 text-center bg-gray-100 text-black relative overflow-hidden transition-transform duration-300 hover:scale-105"
+            className="showcase-card relative rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105"
           >
+            {/* Background image */}
             <img
               src={a.image}
               alt={a.title}
-              className="w-full h-32 object-cover rounded mb-3"
+              className="absolute inset-0 w-full h-full object-cover"
             />
-            <h2 className="text-lg font-bold">{a.title}</h2>
-            <a
-              href={a.file}
-              download
-              className="inline-block mt-2 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
-            >
-              Download
-            </a>
+
+            {/* Black overlay with glow */}
+            <div className="absolute inset-0 bg-black/70 rounded-lg shadow-[0_0_20px_rgba(0,0,0,0.7)]"></div>
+
+            {/* Content */}
+            <div className="relative z-10 flex flex-col items-center justify-center h-full p-4">
+              <h2 className="text-xl font-bold text-blue-400 mb-3 text-center">
+                {a.title}
+              </h2>
+              <a
+                href={a.file}
+                download
+                className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
+              >
+                Download
+              </a>
+            </div>
           </div>
         ))}
       </div>
