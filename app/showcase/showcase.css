@@ -11,7 +11,6 @@
   --gap: 0.9rem;
 }
 
-/* form style */
 .form {
   font-size: 0.9rem;
   display: flex;
@@ -22,7 +21,6 @@
   isolation: isolate;
 }
 
-/* background for input */
 .fancy-bg {
   position: absolute;
   width: 100%;
@@ -35,7 +33,6 @@
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
-/* label styling */
 label {
   width: 100%;
   padding: 0.8em;
@@ -50,7 +47,6 @@ label {
   position: absolute;
 }
 
-/* search icon */
 .search {
   fill: var(--text-color);
   left: var(--inline-padding-of-input);
@@ -61,7 +57,6 @@ svg {
   display: block;
 }
 
-/* close button */
 .close-btn {
   border: none;
   right: var(--inline-padding-of-input);
@@ -79,7 +74,6 @@ svg {
   visibility: hidden;
 }
 
-/* input styling */
 .input {
   color: var(--input-text-color);
   width: 100%;
@@ -96,7 +90,6 @@ svg {
   color: var(--text-color);
 }
 
-/* focus effects */
 .input:focus ~ .fancy-bg {
   border: 1px solid var(--active-color);
   background: var(--focus-input-bg-color);
@@ -111,7 +104,6 @@ svg {
   visibility: visible;
 }
 
-/* autofill override */
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
@@ -127,10 +119,18 @@ input:-webkit-autofill:active {
   position: relative;
   border-radius: 0.75rem;
   overflow: hidden;
+  aspect-ratio: 16 / 9; /* landscape rectangle */
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-/* black overlay with glow */
+.showcase-card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .showcase-card::after {
   content: "";
   position: absolute;
@@ -141,14 +141,32 @@ input:-webkit-autofill:active {
   z-index: 1;
 }
 
-/* hover effect */
 .showcase-card:hover {
   transform: scale(1.05);
   box-shadow: 0 0 25px rgba(0, 150, 255, 0.6); /* blue glow */
 }
 
-/* ensure content sits above overlay */
 .showcase-card > * {
   position: relative;
   z-index: 2;
+  text-align: center;
+}
+
+.showcase-card h2 {
+  color: #3b82f6; /* Tailwind blue-500 */
+  font-weight: bold;
+  margin-bottom: 0.75rem;
+}
+
+.showcase-card a {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: #2563eb; /* Tailwind blue-600 */
+  color: #fff;
+  border-radius: 0.375rem;
+  transition: background 0.3s ease;
+}
+
+.showcase-card a:hover {
+  background: #1d4ed8; /* Tailwind blue-700 */
 }

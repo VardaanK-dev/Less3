@@ -5,7 +5,6 @@ import "./showcase.css";
 export default function ShowcasePage() {
   const [query, setQuery] = useState("");
 
-  // Assets list (files inside /public/assets/)
   const assets = [
     {
       title: "Ratan Tata: When Less becomes More",
@@ -14,7 +13,6 @@ export default function ShowcasePage() {
     },
   ];
 
-  // Filter assets by search query
   const filtered = assets.filter((a) =>
     a.title.toLowerCase().includes(query.toLowerCase())
   );
@@ -48,24 +46,24 @@ export default function ShowcasePage() {
       </form>
 
       {/* Assets grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         {filtered.map((a) => (
           <div
             key={a.title}
             className="showcase-card relative rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105"
           >
-            {/* Background image */}
+            {/* Background image fills landscape rectangle */}
             <img
               src={a.image}
               alt={a.title}
               className="absolute inset-0 w-full h-full object-cover"
             />
 
-            {/* Black overlay with glow */}
+            {/* Dark overlay with glow */}
             <div className="absolute inset-0 bg-black/70 rounded-lg shadow-[0_0_20px_rgba(0,0,0,0.7)]"></div>
 
-            {/* Content */}
-            <div className="relative z-10 flex flex-col items-center justify-center h-full p-4">
+            {/* Content on top */}
+            <div className="relative z-10 flex flex-col items-center justify-center h-40 p-4">
               <h2 className="text-xl font-bold text-blue-400 mb-3 text-center">
                 {a.title}
               </h2>
