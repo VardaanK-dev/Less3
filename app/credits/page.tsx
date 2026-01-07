@@ -1,12 +1,10 @@
 "use client";
 import { Canvas, useFrame } from "@react-three/fiber";
-import * as THREE from "three";
-import { Mesh } from "three";
 import { useTexture } from "@react-three/drei";
 import { useRef, useState } from "react";
 
 function LogoPlane({ src }: { src: string }) {
-  const mesh = useRef<Mesh>(null);
+  const mesh = useRef(null);
   const texture = useTexture(src);
 
   useFrame(() => {
