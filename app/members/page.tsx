@@ -22,7 +22,7 @@ export default function MembersPage() {
               className="w-full h-32 sm:h-40 md:h-48 lg:h-56 object-cover"
             />
             <p className="tip">{m.name}</p>
-            <p className="second-text">Member of less3 group</p>
+            <p className="second-text">Member of Less³ group</p>
           </div>
         ))}
       </div>
