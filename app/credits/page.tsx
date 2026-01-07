@@ -1,5 +1,6 @@
 "use client";
 import { Canvas, useFrame } from "@react-three/fiber";
+import * as THREE from "three";
 import { useTexture } from "@react-three/drei";
 import { useRef, useState } from "react";
 
