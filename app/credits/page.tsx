@@ -1,4 +1,5 @@
 // app/credits/page.tsx
+// Left at scrolling effect, Work on scrolling effect now
 "use client";
 
 export default function CreditsPage() {
