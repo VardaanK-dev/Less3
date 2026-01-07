@@ -13,9 +13,9 @@ export default function ShowcasePage() {
       type: "download", // local file
     },
     {
-      title: "Design Overview",
+      title: "APJ Abdul Kalam",
       previewUrl: "https://www.canva.com/design/DAG9ja6IeVQ/xnv7qU6TgA5KHeBbHEcYKA/view?utm_content=DAG9ja6IeVQ&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=he273073246", // Canva link
-      image: "/assets/mem_placeholder.png",
+      image: "/assets/A.P.J ABDUL KALAM.png",
       type: "preview", // external preview
     },
     {
