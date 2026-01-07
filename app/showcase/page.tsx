@@ -19,7 +19,7 @@ export default function ShowcasePage() {
       type: "preview", // external preview
     },
     {
-      title: "Final Report",
+      title: "Mark Zuckerberg",
       file: "/assets/report.pptx",
       image: "/assets/mem_placeholder.png",
       type: "download",
@@ -91,7 +91,7 @@ export default function ShowcasePage() {
                   href={a.previewUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-3 py-1 bg-green-600 text-white rounded hover:bg-green-700 transition text-xs sm:text-sm"
+                  className="px-3 py-1 bg-yellow-600 text-white rounded hover:bg-yellow-700 transition text-xs sm:text-sm"
                 >
                   Preview
                 </a>
