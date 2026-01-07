@@ -10,16 +10,19 @@ export default function ShowcasePage() {
       title: "Ratan Tata: When Less becomes More",
       file: "/assets/RatanTATA.pptx",
       image: "/assets/RatanTata.jpg",
+      type: "download", // local file
     },
     {
       title: "Design Overview",
-      file: "/assets/design.pptx",
+      previewUrl: "https://www.canva.com/design/EXAMPLE-LINK", // Canva link
       image: "/assets/mem_placeholder.png",
+      type: "preview", // external preview
     },
     {
       title: "Final Report",
       file: "/assets/report.pptx",
       image: "/assets/mem_placeholder.png",
+      type: "download",
     },
   ];
 
@@ -74,13 +77,25 @@ export default function ShowcasePage() {
               <h2 className="text-sm sm:text-base md:text-lg font-bold text-blue-400 truncate">
                 {a.title}
               </h2>
-              <a
-                href={a.file}
-                download
-                className="px-3 py-1 bg-blue-600 text-white rounded hover:bg-blue-700 transition text-xs sm:text-sm"
-              >
-                Download
-              </a>
+
+              {a.type === "download" ? (
+                <a
+                  href={a.file}
+                  download
+                  className="px-3 py-1 bg-blue-600 text-white rounded hover:bg-blue-700 transition text-xs sm:text-sm"
+                >
+                  Download
+                </a>
+              ) : (
+                <a
+                  href={a.previewUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-3 py-1 bg-green-600 text-white rounded hover:bg-green-700 transition text-xs sm:text-sm"
+                >
+                  Preview
+                </a>
+              )}
             </div>
           </div>
         ))}
