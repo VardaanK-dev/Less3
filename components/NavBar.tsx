@@ -7,6 +7,7 @@ import {
   UserGroupIcon,
   MapIcon,
   SparklesIcon,
+  InformationCircleIcon,
   Bars3Icon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
@@ -60,6 +61,14 @@ export default function NavBar() {
               </span>
             </Link>
           </li>
+          <li>
+            <Link href="/credits" className="group flex items-center text-white">
+              <InformationCircleIcon className="h-6 w-6 transition-transform duration-300 group-hover:-translate-x-1" />
+              <span className="ml-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                Credits
+              </span>
+            </Link>
+          </li>
         </ul>
 
         {/* Mobile hamburger */}
@@ -89,6 +98,9 @@ export default function NavBar() {
           </Link>
           <Link href="/showcase" onClick={handleNavClick} className="flex items-center text-white">
             <SparklesIcon className="h-6 w-6 mr-2" /> Showcase
+          </Link>
+          <Link href="/credits" onClick={handleNavClick} className="flex items-center text-white">
+            <InformationCircleIcon className="h-6 w-6 mr-2" /> Credits
           </Link>
         </div>
       )}
