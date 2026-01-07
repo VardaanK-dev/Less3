@@ -14,7 +14,7 @@ export default function ShowcasePage() {
     },
     {
       title: "Design Overview",
-      previewUrl: "https://www.canva.com/design/EXAMPLE-LINK", // Canva link
+      previewUrl: "https://www.canva.com/design/DAG9ja6IeVQ/xnv7qU6TgA5KHeBbHEcYKA/view?utm_content=DAG9ja6IeVQ&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=he273073246", // Canva link
       image: "/assets/mem_placeholder.png",
       type: "preview", // external preview
     },
