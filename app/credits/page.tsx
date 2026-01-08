@@ -1,21 +1,31 @@
-// app/credits/page.tsx
-// Left at scrolling effect, Work on scrolling effect now
-"use client";
-
 export default function CreditsPage() {
   return (
-    <main id="credits" className="min-h-screen bg-gray-900 text-white p-8">
-      <h1 className="text-3xl font-bold mb-10">Credits</h1>
-      <p className="text-gray-400 mb-6">
-        This site wouldn’t have been possible without these amazing platforms and resources.
-      </p>
+    <main id="credits" className="min-h-screen bg-gray-900 text-white relative">
+      {/* Scroll message badge */}
+      <div className="badge">
+        Scroll Down for the magic to begin
+        <span></span>
+      </div>
 
-      <ul className="space-y-4">
-        <li>UI Verse — UI inspiration and assets</li>
-        <li>Flowbite — Tailwind CSS components</li>
-        <li>GitHub — Version control & collaboration</li>
-        <li>Vercel — Hosting & deployment</li>
-      </ul>
+      {/* Example credits content */}
+      <section className="pt-24 space-y-32">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-10">
+          <img
+            src="/credits_assests/github.png"
+            alt="GitHub"
+            className="h-28 w-28 rounded-full shadow-[0_0_30px_rgba(255,255,255,0.25)]"
+          />
+          <div>
+            <h2 className="text-2xl font-semibold">GitHub</h2>
+            <p className="text-gray-400">Version control & collaboration</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Inspired footer */}
+      <a href="#" className="inspired">
+        Inspired by your creativity ✨
+      </a>
     </main>
   );
 }
