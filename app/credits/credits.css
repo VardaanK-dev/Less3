@@ -74,16 +74,3 @@
   left: -1px;
   border-radius: 999px;
 }
-
-.inspired {
-  position: absolute;
-  bottom: 8%;
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 12px;
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-.inspired:hover {
-  color: rgba(255, 255, 255, 0.8);
-}

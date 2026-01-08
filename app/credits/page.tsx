@@ -1,14 +1,15 @@
+// app/credits/page.tsx
 export default function CreditsPage() {
   return (
-    <main id="credits" className="min-h-screen bg-gray-900 text-white relative">
+    <main id="credits" className="min-h-screen bg-black text-white relative flex flex-col items-center justify-center">
       {/* Scroll message badge */}
       <div className="badge">
         Scroll Down for the magic to begin
         <span></span>
       </div>
 
-      {/* Example credits content */}
-      <section className="pt-24 space-y-32">
+      {/* Example credits content (hidden until you scroll) */}
+      <section className="pt-32 space-y-32 w-full max-w-4xl">
         <div className="flex flex-col md:flex-row items-center justify-center gap-10">
           <img
             src="/credits_assests/github.png"
@@ -21,11 +22,6 @@ export default function CreditsPage() {
           </div>
         </div>
       </section>
-
-      {/* Inspired footer */}
-      <a href="#" className="inspired">
-        Inspired by your creativity ✨
-      </a>
     </main>
   );
 }
