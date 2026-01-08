@@ -1,4 +1,5 @@
 // app/credits/page.tsx
+import "./credits.css"
 export default function CreditsPage() {
   return (
     <main id="credits" className="min-h-screen bg-black text-white relative flex flex-col items-center justify-center">
