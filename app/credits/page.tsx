@@ -32,12 +32,6 @@ function SmokeSection({ id, color, logo, title, text }: any) {
 export default function CreditsPage() {
   return (
     <main id="credits" className="min-h-screen bg-black text-white relative">
-      {/* Floating message box stays unchanged */}
-      <div className="badge floating-message">
-        Scroll Down for the magic to begin
-        <span></span>
-      </div>
-
       {/* Sections */}
       <SmokeSection
         id="ui-verse"
