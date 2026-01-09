@@ -6,7 +6,7 @@ function useSmokeEffect(canvasId: string, color: string) {
   useEffect(() => {
     const canvas = document.getElementById(canvasId) as HTMLCanvasElement | null;
     if (!canvas) return;
-    const ctx = canvas.getContext("2d");
+    const ctx = canvas.getContext("2d")!;
     if (!ctx) return;
 
     canvas.width = canvas.offsetWidth;
