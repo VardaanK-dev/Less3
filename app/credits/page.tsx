@@ -1,46 +1,35 @@
+// app/credits/page.tsx
 "use client";
 import { useEffect } from "react";
 import "./credits.css";
 
-function useSmokeEffect(canvasId: string, color: string) {
+function SmokeSection({ id, color, logo, title, text }: any) {
   useEffect(() => {
-    const canvas = document.getElementById(canvasId) as HTMLCanvasElement | null;
-    if (!canvas) return;
-    const ctx = canvas.getContext("2d")!;
-    if (!ctx) return;
+    const section = document.getElementById(id);
+    const smoke = section?.querySelector(".smoke") as HTMLDivElement | null;
+    if (!section || !smoke) return;
 
-    canvas.width = canvas.offsetWidth;
-    canvas.height = canvas.offsetHeight;
-
-    const particles: { x: number; y: number; alpha: number }[] = [];
-
-    canvas.addEventListener("mousemove", (e) => {
-      const rect = canvas.getBoundingClientRect();
+    section.addEventListener("mousemove", (e) => {
+      const rect = section.getBoundingClientRect();
       const x = e.clientX - rect.left;
       const y = e.clientY - rect.top;
-      particles.push({ x, y, alpha: 1 });
+      smoke.style.background = `radial-gradient(circle at ${x}px ${y}px, ${color}, transparent 60%)`;
     });
+  }, [id, color]);
 
-    function animate() {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      particles.forEach((p, i) => {
-        ctx.fillStyle = color.replace("ALPHA", p.alpha.toString());
-        ctx.beginPath();
-        ctx.arc(p.x, p.y, 40 * p.alpha, 0, Math.PI * 2);
-        ctx.fill();
-        p.alpha -= 0.02;
-        if (p.alpha <= 0) particles.splice(i, 1);
-      });
-      requestAnimationFrame(animate);
-    }
-    animate();
-  }, [canvasId, color]);
+  return (
+    <section id={id} className="credits-section">
+      <div className="smoke"></div>
+      <div className="content">
+        <img src={logo} alt={title} className="logo" />
+        <h2>{title}</h2>
+        <p>{text}</p>
+      </div>
+    </section>
+  );
 }
 
 export default function CreditsPage() {
-  useSmokeEffect("smoke-ui", "rgba(128,0,255,ALPHA)");     // purple for UI Verse
-  useSmokeEffect("smoke-flowbite", "rgba(0,200,200,ALPHA)"); // teal for Flowbite
-
   return (
     <main id="credits" className="min-h-screen bg-black text-white relative">
       {/* Floating message box stays unchanged */}
@@ -49,25 +38,35 @@ export default function CreditsPage() {
         <span></span>
       </div>
 
-      {/* UI Verse section */}
-      <section className="credits-section">
-        <canvas id="smoke-ui" className="smoke-canvas"></canvas>
-        <div className="content">
-          <img src="/credits_assests/uiverse.png" alt="UI Verse" className="logo" />
-          <h2>UI Verse</h2>
-          <p>UI inspiration and assets</p>
-        </div>
-      </section>
-
-      {/* Flowbite section */}
-      <section className="credits-section">
-        <canvas id="smoke-flowbite" className="smoke-canvas"></canvas>
-        <div className="content">
-          <img src="/credits_assests/flowbite.png" alt="Flowbite" className="logo" />
-          <h2>Flowbite</h2>
-          <p>Tailwind CSS components</p>
-        </div>
-      </section>
+      {/* Sections */}
+      <SmokeSection
+        id="ui-verse"
+        color="rgba(128,0,255,0.4)" // purple glow
+        logo="/credits_assests/uiverse.png"
+        title="UI Verse"
+        text="UI inspiration and assets"
+      />
+      <SmokeSection
+        id="flowbite"
+        color="rgba(0,200,200,0.4)" // teal glow
+        logo="/credits_assests/flowbite.png"
+        title="Flowbite"
+        text="Tailwind CSS components"
+      />
+      <SmokeSection
+        id="github"
+        color="rgba(200,200,200,0.4)" // gray glow
+        logo="/credits_assests/github.png"
+        title="GitHub"
+        text="Version control & collaboration"
+      />
+      <SmokeSection
+        id="vercel"
+        color="rgba(255,255,255,0.4)" // white glow
+        logo="/credits_assests/vercel.png"
+        title="Vercel"
+        text="Hosting & deployment"
+      />
     </main>
   );
 }
