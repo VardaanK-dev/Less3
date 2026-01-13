@@ -1,5 +1,5 @@
 import Spline from '@splinetool/react-spline/next';
-import ./credits.css
+import './credits.css';
 
 export default function CreditsSection() {
   return (
