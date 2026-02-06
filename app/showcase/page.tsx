@@ -20,9 +20,9 @@ export default function ShowcasePage() {
     },
     {
       title: "Mark Zuckerberg",
-      file: "/assets/report.pptx",
-      image: "/assets/mem_placeholder.png",
-      type: "download",
+      previewUrl: "/assets/Mark.jpeg",
+      image: "/assets/Mark.jpeg",
+      type: "preview",
     },
   ];
 
