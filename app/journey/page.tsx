@@ -29,30 +29,6 @@ export default function JourneyPage() {
         },
       ],
     },
-    {
-      name: "January 2026",
-      color: "bg-yellow-600 hover:bg-yellow-700",
-      members: [
-        {
-          name: "Hemendra",
-          color: "text-blue-400",
-          img: "/assets/placeholder",
-          desc: "Placeholder",
-        },
-        {
-          name: "Jastina",
-          color: "text-green-400",
-          img: "/assets/placeholder",
-          desc: "Placeholder",
-        },
-        {
-          name: "Vardaan",
-          color: "text-purple-400",
-          img: "/assets/placeholder",
-          desc: "Placeholder",
-        },
-      ],
-    },
   ];
 
   return (
