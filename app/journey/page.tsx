@@ -18,7 +18,7 @@ export default function JourneyPage() {
         {
           name: "Jastina",
           color: "text-green-400",
-          img: "/assets/memberB_presentation.png",
+          img: "/assets/Mark.jpeg",
           desc: "Jastina focused on Mark Zuckerberg and his local, national and global impacts.",
         },
         {
