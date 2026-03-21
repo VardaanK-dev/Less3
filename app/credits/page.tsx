@@ -6,31 +6,31 @@ export default function CreditsSection() {
     <section className="credits-container">
       <div className="credits-card">
         <div className="credit-item">
-          <a href="/" title="GitHub">
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" title="GitHub">
             <img src="/credits/github.png" alt="GitHub" />
           </a>
           <span>GitHub</span>
         </div>
         <div className="credit-item">
-          <a href="/" title="Vercel">
+          <a href="https://vercel.com" target="_blank" rel="noopener noreferrer" title="Vercel">
             <img src="/credits/vercel.png" alt="Vercel" />
           </a>
           <span>Vercel</span>
         </div>
         <div className="credit-item">
-          <a href="/" title="Flowbite">
+          <a href="https://flowbite.com" target="_blank" rel="noopener noreferrer" title="Flowbite">
             <img src="/credits/flowbite.png" alt="Flowbite" />
           </a>
           <span>Flowbite</span>
         </div>
         <div className="credit-item">
-          <a href="/" title="UI Verse">
+          <a href="https://uiverse.io" target="_blank" rel="noopener noreferrer" title="UI Verse">
             <img src="/credits/uiverse.png" alt="UI Verse" />
           </a>
           <span>UI Verse</span>
         </div>
         <div className="credit-item">
-          <a href="/" title="Copilot">
+          <a href="https://copilot.microsoft.com" target="_blank" rel="noopener noreferrer" title="Copilot">
             <img src="/credits/copilot.png" alt="Copilot" />
           </a>
           <span>Copilot</span>
