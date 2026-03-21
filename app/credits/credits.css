@@ -7,11 +7,13 @@
 
 .credits-card {
   display: flex;
+  flex-wrap: wrap;
   gap: 2rem;
   padding: 2rem;
   background-color: #1a1a1a; /* dark background */
   border-radius: 24px;       /* rounded rectangle */
   box-shadow: 0 6px 24px rgba(0,0,0,0.3);
+  justify-content: center;
 }
 
 .credit-item {
@@ -19,6 +21,7 @@
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
+  flex: 1 1 100px;
 }
 
 .credit-item img {
@@ -34,4 +37,21 @@
   color: #fff;
   font-size: 0.9rem;
   font-weight: 500;
+}
+
+/* 📱 Mobile overrides go at the end */
+@media (max-width: 600px) {
+  .credits-card {
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .credit-item img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .credit-item span {
+    font-size: 0.8rem;
+  }
 }
