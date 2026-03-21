@@ -1,4 +1,4 @@
-import "./showcase.css";
+import "./credits.css";
 // app/credits/page.tsx (App Router)
 export default function CreditsSection() {
   return (
