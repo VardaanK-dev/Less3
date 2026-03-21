@@ -8,7 +8,7 @@ export default function ShowcasePage() {
   const assets = [
     {
       title: "Ratan Tata: When Less becomes More",
-      file: "/assets/RatanTATA.pptx",
+      file: "/assets/Ratan_TATA.pptx",
       image: "/assets/RatanTata.jpg",
       type: "download", // local file
     },
