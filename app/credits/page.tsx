@@ -1,27 +1,38 @@
-import "./credits.css";
 // app/credits/page.tsx (App Router)
+import "./credits.css";
+
 export default function CreditsSection() {
   return (
     <section className="credits-container">
       <div className="credits-card">
         <div className="credit-item">
-          <img src="/credits/github.png" alt="GitHub" />
+          <a href="/" title="GitHub">
+            <img src="/credits/github.png" alt="GitHub" />
+          </a>
           <span>GitHub</span>
         </div>
         <div className="credit-item">
-          <img src="/credits/vercel.png" alt="Vercel" />
+          <a href="/" title="Vercel">
+            <img src="/credits/vercel.png" alt="Vercel" />
+          </a>
           <span>Vercel</span>
         </div>
         <div className="credit-item">
-          <img src="/credits/flowbite.png" alt="Flowbite" />
+          <a href="/" title="Flowbite">
+            <img src="/credits/flowbite.png" alt="Flowbite" />
+          </a>
           <span>Flowbite</span>
         </div>
         <div className="credit-item">
-          <img src="/credits/uiverse.png" alt="UI Verse" />
+          <a href="/" title="UI Verse">
+            <img src="/credits/uiverse.png" alt="UI Verse" />
+          </a>
           <span>UI Verse</span>
         </div>
         <div className="credit-item">
-          <img src="/credits/copilot.png" alt="Copilot" />
+          <a href="/" title="Copilot">
+            <img src="/credits/copilot.png" alt="Copilot" />
+          </a>
           <span>Copilot</span>
         </div>
       </div>

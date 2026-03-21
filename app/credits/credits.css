@@ -31,6 +31,13 @@
   border-radius: 16px; /* rounded square placeholder */
   background: #fff;    /* placeholder background */
   padding: 0.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer; /* makes it clear it's clickable */
+}
+
+.credit-item img:hover {
+  transform: scale(1.1); /* slightly enlarge */
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.6); /* glowing effect */
 }
 
 .credit-item span {
@@ -39,7 +46,7 @@
   font-weight: 500;
 }
 
-/* 📱 Mobile overrides go at the end */
+/* 📱 Mobile overrides */
 @media (max-width: 600px) {
   .credits-card {
     gap: 1rem;
