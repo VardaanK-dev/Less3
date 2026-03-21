@@ -46,14 +46,6 @@ export default function NavBar() {
             </Link>
           </li>
           <li>
-            <Link href="/journey" className="group flex items-center text-white">
-              <MapIcon className="h-6 w-6 transition-transform duration-300 group-hover:-translate-x-1" />
-              <span className="ml-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                Journey
-              </span>
-            </Link>
-          </li>
-          <li>
             <Link href="/showcase" className="group flex items-center text-white">
               <SparklesIcon className="h-6 w-6 transition-transform duration-300 group-hover:-translate-x-1" />
               <span className="ml-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
