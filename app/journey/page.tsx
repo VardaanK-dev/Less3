@@ -48,15 +48,15 @@ export default function JourneyPage() {
   ];
 
   return (
-    <section className="max-w-4xl mx-auto px-4 sm:px-8 py-8">
-      <h1 className="text-3xl sm:text-4xl font-bold mb-8 text-center text-white">
+    <section className="px-4 sm:px-8 py-8">
+      <h1 className="text-3xl sm:text-4xl font-bold mb-12 text-center text-white">
         Our Journey
       </h1>
-      <div className="space-y-6 sm:space-y-8">
+      <div className="flex flex-col items-center space-y-6 sm:space-y-8">
         {milestones.map((m, i) => (
           <div
             key={i}
-            className="bg-gray-900 rounded-lg sm:rounded-xl shadow-md sm:shadow-lg p-4 sm:p-6 border border-gray-700"
+            className="w-full max-w-md sm:max-w-2xl bg-gray-900 rounded-lg sm:rounded-xl shadow-md sm:shadow-lg p-4 sm:p-6 border border-gray-700"
             data-aos={m.animation}
             data-aos-delay={i * 200}
           >
