@@ -9,8 +9,8 @@ export default function JourneyPage() {
   useEffect(() => {
     AOS.init({
       duration: 1000,
-      once: false,   // allow animations to repeat
-      mirror: true,  // 👈 enables retract (reverse) animations
+      once: false,
+      mirror: true,
     });
   }, []);
 
@@ -48,19 +48,25 @@ export default function JourneyPage() {
   ];
 
   return (
-    <section className="max-w-4xl mx-auto p-8">
-      <h1 className="text-4xl font-bold mb-12 text-center text-white">Our Journey</h1>
-      <div className="space-y-8">
+    <section className="max-w-4xl mx-auto px-4 sm:px-8 py-8">
+      <h1 className="text-3xl sm:text-4xl font-bold mb-8 text-center text-white">
+        Our Journey
+      </h1>
+      <div className="space-y-6 sm:space-y-8">
         {milestones.map((m, i) => (
           <div
             key={i}
-            className="bg-gray-900 rounded-xl shadow-lg p-6 border border-gray-700"
+            className="bg-gray-900 rounded-lg sm:rounded-xl shadow-md sm:shadow-lg p-4 sm:p-6 border border-gray-700"
             data-aos={m.animation}
-            data-aos-delay={i * 200} // staggered entry
+            data-aos-delay={i * 200}
           >
-            <h3 className="text-xl font-semibold text-cyan-400">{m.date}</h3>
-            <h2 className="text-2xl font-bold text-white mt-2">{m.title}</h2>
-            <p className="text-gray-300 mt-2">{m.desc}</p>
+            <h3 className="text-lg sm:text-xl font-semibold text-cyan-400">
+              {m.date}
+            </h3>
+            <h2 className="text-xl sm:text-2xl font-bold text-white mt-1 sm:mt-2">
+              {m.title}
+            </h2>
+            <p className="text-gray-300 mt-2 text-sm sm:text-base">{m.desc}</p>
           </div>
         ))}
       </div>
