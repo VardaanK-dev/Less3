@@ -7,7 +7,11 @@ import "aos/dist/aos.css";
 
 export default function JourneyPage() {
   useEffect(() => {
-    AOS.init({ duration: 1000, once: true });
+    AOS.init({
+      duration: 1000,
+      once: false,   // allow animations to repeat
+      mirror: true,  // 👈 enables retract (reverse) animations
+    });
   }, []);
 
   const milestones = [
@@ -15,26 +19,31 @@ export default function JourneyPage() {
       date: "December 2025",
       title: "Group Formed & Logo Created",
       desc: "We came together as a team, decided on the name Less³, designed our logo, built the website, and prepared prototype presentations.",
+      animation: "fade-up",
     },
     {
       date: "January 2026",
       title: "Chart Works",
       desc: "Focused on creating charts and visual data to support the project.",
+      animation: "fade-right",
     },
     {
       date: "February 2026",
       title: "Presentation Expansion",
       desc: "Added new content and refinements to the prototype presentations.",
+      animation: "zoom-in",
     },
     {
       date: "March 2026",
       title: "Presentation Rectification",
       desc: "Reviewed and corrected the presentations, polishing them for final delivery.",
+      animation: "flip-up",
     },
     {
       date: "April 4, 2026",
       title: "Final Day",
       desc: "The official end of the project, marking the culmination of all our work.",
+      animation: "fade-left",
     },
   ];
 
@@ -46,12 +55,10 @@ export default function JourneyPage() {
           <div
             key={i}
             className="bg-gray-900 rounded-xl shadow-lg p-6 border border-gray-700"
-            data-aos="fade-up"
-            data-aos-delay={i * 200} // staggered animation
+            data-aos={m.animation}
+            data-aos-delay={i * 200} // staggered entry
           >
-            <h3 className="text-xl font-semibold text-cyan-400">
-              {m.date}
-            </h3>
+            <h3 className="text-xl font-semibold text-cyan-400">{m.date}</h3>
             <h2 className="text-2xl font-bold text-white mt-2">{m.title}</h2>
             <p className="text-gray-300 mt-2">{m.desc}</p>
           </div>
