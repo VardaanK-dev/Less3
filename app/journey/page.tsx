@@ -39,25 +39,24 @@ export default function JourneyPage() {
   ];
 
   return (
-    <section className="max-w-3xl mx-auto p-8">
+    <section className="max-w-4xl mx-auto p-8">
       <h1 className="text-4xl font-bold mb-12 text-center text-white">Our Journey</h1>
-      <ol className="relative border-l border-gray-700">
+      <div className="space-y-8">
         {milestones.map((m, i) => (
-          <li
+          <div
             key={i}
-            className="mb-12 ml-6"
+            className="bg-gray-900 rounded-xl shadow-lg p-6 border border-gray-700"
             data-aos="fade-up"
-            data-aos-delay={i * 200} // 👈 staggered delay
+            data-aos-delay={i * 200} // staggered animation
           >
-            {/* Neutral dot instead of bright cyan */}
-            <div className="absolute w-3 h-3 bg-gray-500 rounded-full -left-1.5 border border-gray-900"></div>
-            <h3 className="text-xl font-semibold text-white">
-              {m.date} — {m.title}
+            <h3 className="text-xl font-semibold text-cyan-400">
+              {m.date}
             </h3>
-            <p className="text-gray-400">{m.desc}</p>
-          </li>
+            <h2 className="text-2xl font-bold text-white mt-2">{m.title}</h2>
+            <p className="text-gray-300 mt-2">{m.desc}</p>
+          </div>
         ))}
-      </ol>
+      </div>
     </section>
   );
 }
