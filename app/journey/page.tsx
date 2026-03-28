@@ -46,9 +46,11 @@ export default function JourneyPage() {
           <li
             key={i}
             className="mb-12 ml-6"
-            data-aos={i % 2 === 0 ? "fade-right" : "fade-left"}
+            data-aos="fade-up"
+            data-aos-delay={i * 200} // 👈 staggered delay
           >
-            <div className="absolute w-3 h-3 bg-cyan-400 rounded-full -left-1.5 border border-gray-900"></div>
+            {/* Neutral dot instead of bright cyan */}
+            <div className="absolute w-3 h-3 bg-gray-500 rounded-full -left-1.5 border border-gray-900"></div>
             <h3 className="text-xl font-semibold text-white">
               {m.date} — {m.title}
             </h3>
