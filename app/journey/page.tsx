@@ -9,8 +9,8 @@ export default function JourneyPage() {
   useEffect(() => {
     AOS.init({
       duration: 1000,
-      once: false,   // allow repeat animations
-      mirror: true,  // retract animations when scrolling back up
+      once: false,
+      mirror: true,
     });
   }, []);
 
@@ -52,13 +52,14 @@ export default function JourneyPage() {
       <h1 className="text-3xl sm:text-4xl font-bold mb-12 text-center text-white">
         Our Journey
       </h1>
+      {/* Centered container */}
       <div className="flex flex-col items-center w-full space-y-6 sm:space-y-8">
         {milestones.map((m, i) => (
           <div
             key={i}
-            className="w-full max-w-md sm:max-w-2xl bg-gray-900 rounded-lg sm:rounded-xl shadow-md sm:shadow-lg p-4 sm:p-6 border border-gray-700"
+            className="w-full max-w-md sm:max-w-2xl bg-gray-900 rounded-lg sm:rounded-xl shadow-md sm:shadow-lg p-4 sm:p-6 border border-gray-700 text-center"
             data-aos={m.animation}
-            data-aos-delay={i * 200} // staggered animation
+            data-aos-delay={i * 200}
           >
             <h3 className="text-lg sm:text-xl font-semibold text-cyan-400">
               {m.date}
