@@ -16,7 +16,7 @@ export default function ShowcasePage() {
       title: "APJ Abdul Kalam",
       file: "assets/APJ Abdul Kalam.pptx",
       image: "/assets/A.P.J ABDUL KALAM.png",
-      type: "preview", // external preview
+      type: "Download", // external preview
     },
     {
       title: "Mark Zuckerberg Chart",
@@ -45,30 +45,6 @@ export default function ShowcasePage() {
   return (
     <main className="p-4 sm:p-8 min-h-screen bg-gray-900 text-white">
       <h1 className="text-3xl font-bold mb-6">Showcase</h1>
-
-      {/* Search bar */}
-      <form className="form mb-8 w-full max-w-md">
-        <label htmlFor="search" className="w-full">
-          <input
-            className="input"
-            type="text"
-            placeholder="Search assets"
-            id="search"
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-            required
-          />
-          <div className="fancy-bg"></div>
-          <div className="search">🔍</div>
-          <button
-            className="close-btn"
-            type="reset"
-            onClick={() => setQuery("")}
-          >
-            ✖
-          </button>
-        </label>
-      </form>
 
       {/* Assets grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

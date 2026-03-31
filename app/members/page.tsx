@@ -1,31 +1,68 @@
 // app/members/page.tsx
-import "./members.css";
-import Image from "next/image";
-export default function MembersPage() {
-  const members = [
-    { name: "Hemendra", color: "red" },
-    { name: "Jastina", color: "blue" },
-    { name: "Vardaan", color: "green" },
-  ];
+"use client";
 
+import { useState } from "react";
+
+const members = [
+  { name: "Jastina", role: "Art", emoji: "🎨", image: "/assets/jastina.jpg" },
+  { name: "Hemendra", role: "Ideas & Brainstorming", emoji: "💡", image: "/assets/hemendra.jpg" },
+  { name: "Vardaan", role: "Tech", emoji: "💻", image: "/assets/vardaan.jpg" },
+];
+
+export default function MembersPage() {
   return (
-    <main className="p-8">
-      <h1 className="text-3xl font-bold mb-6">Meet Our Members</h1>
-      <div className="cards">
+    <section className="min-h-screen bg-gray-900 text-white px-4 sm:px-8 py-12">
+      <h1 className="text-3xl sm:text-4xl font-bold mb-12 text-center">Our Members</h1>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
         {members.map((m) => (
-          <div key={m.name} className={`card ${m.color}`}>
-            <Image
-              src="/mem_placeholder.png"
-              alt="Member Placeholder"
-              width={250}
-              height={200}
-              className="w-full h-32 sm:h-40 md:h-48 lg:h-56 object-cover"
-            />
-            <p className="tip">{m.name}</p>
-            <p className="second-text">Member of Less³ group</p>
-          </div>
+          <MemberCard key={m.name} {...m} />
         ))}
       </div>
-    </main>
+    </section>
+  );
+}
+
+function MemberCard({ name, role, emoji, image }: { name: string; role: string; emoji: string; image: string }) {
+  const [particles, setParticles] = useState<{ id: number; x: number; y: number; rotation: number }[]>([]);
+
+  const spawnParticles = () => {
+    const newParticles = Array.from({ length: 8 }).map((_, i) => ({
+      id: Date.now() + i,
+      x: Math.random() * 100 - 50, // random horizontal offset
+      y: Math.random() * 100 - 50, // random vertical offset
+      rotation: Math.random() * 360,
+    }));
+    setParticles(newParticles);
+
+    // Clear after animation duration
+    setTimeout(() => setParticles([]), 1000);
+  };
+
+  return (
+    <div
+      className="relative bg-gray-800 rounded-lg shadow-lg overflow-hidden p-6 flex flex-col items-center transition-transform duration-300 hover:scale-105"
+      onMouseEnter={spawnParticles}
+    >
+      <img src={image} alt={name} className="w-32 h-32 rounded-full object-cover mb-4" />
+      <h2 className="text-xl font-bold">{name}</h2>
+      <p className="text-gray-400">{role}</p>
+
+      {/* Emoji particles */}
+      {particles.map((p) => (
+        <span
+          key={p.id}
+          className="absolute text-2xl transition-all duration-1000 opacity-0"
+          style={{
+            left: "50%",
+            top: "50%",
+            transform: `translate(-50%, -50%) translate(${p.x}px, ${p.y}px) rotate(${p.rotation}deg)`,
+            opacity: 1,
+          }}
+        >
+          {emoji}
+        </span>
+      ))}
+    </div>
   );
 }
