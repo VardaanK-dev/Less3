@@ -14,15 +14,27 @@ export default function ShowcasePage() {
     },
     {
       title: "APJ Abdul Kalam",
-      previewUrl: "https://www.canva.com/design/DAG9ja6IeVQ/xnv7qU6TgA5KHeBbHEcYKA/view?utm_content=DAG9ja6IeVQ&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=he273073246", // Canva link
+      file: "assets/APJ Abdul Kalam.pptx",
       image: "/assets/A.P.J ABDUL KALAM.png",
       type: "preview", // external preview
     },
     {
-      title: "Mark Zuckerberg",
-      previewUrl: "/assets/Mark.jpeg",
+      title: "Mark Zuckerberg Chart",
       image: "/assets/Mark.jpeg",
-      type: "preview",
+      type: "preview", // chart image only
+      previewUrl: "/assets/Mark.jpeg",
+    },
+    {
+      title: "Mark Zuckerberg Presentation",
+      file: "/assets/Mark Zuckerberg.pptx",
+      image: "/assets/MarkPPT.jpg", // thumbnail
+      type: "download",
+    },
+    {
+      title: "Merged Presentation",
+      file: "/assets/Merged(Less3).pptx",
+      image: "/assets/Merged(Less3).png", // thumbnail
+      type: "download",
     },
   ];
 
