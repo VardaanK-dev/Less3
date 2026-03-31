@@ -2,11 +2,12 @@
 "use client";
 
 import { useState } from "react";
+import "./members.css";
 
 const members = [
-  { name: "Jastina", role: "Art", emoji: "🎨", image: "/assets/jastina.jpg" },
-  { name: "Hemendra", role: "Ideas & Brainstorming", emoji: "💡", image: "/assets/hemendra.jpg" },
-  { name: "Vardaan", role: "Tech", emoji: "💻", image: "/assets/vardaan.jpg" },
+  { name: "Jastina", role: "Art", emojis: ["🎨", "✨", "🖌️"], image: "/assets/jastina.jpg" },
+  { name: "Hemendra", role: "Ideas & Brainstorming", emojis: ["💡", "🤔", "✨"], image: "/assets/hemendra.jpg" },
+  { name: "Vardaan", role: "Tech", emojis: ["💻", "⚙️", "🚀"], image: "/assets/vardaan.jpg" },
 ];
 
 export default function MembersPage() {
@@ -23,20 +24,23 @@ export default function MembersPage() {
   );
 }
 
-function MemberCard({ name, role, emoji, image }: { name: string; role: string; emoji: string; image: string }) {
-  const [particles, setParticles] = useState<{ id: number; x: number; y: number; rotation: number }[]>([]);
+function MemberCard({ name, role, emojis, image }: { name: string; role: string; emojis: string[]; image: string }) {
+  const [particles, setParticles] = useState<
+    { id: number; x: number; y: number; rotation: number; emoji: string }[]
+  >([]);
 
   const spawnParticles = () => {
-    const newParticles = Array.from({ length: 8 }).map((_, i) => ({
+    const newParticles = Array.from({ length: 10 }).map((_, i) => ({
       id: Date.now() + i,
-      x: Math.random() * 100 - 50, // random horizontal offset
-      y: Math.random() * 100 - 50, // random vertical offset
+      x: Math.random() * 150 - 75, // spread horizontally
+      y: Math.random() * 150 - 75, // spread vertically
       rotation: Math.random() * 360,
+      emoji: emojis[Math.floor(Math.random() * emojis.length)],
     }));
     setParticles(newParticles);
 
     // Clear after animation duration
-    setTimeout(() => setParticles([]), 1000);
+    setTimeout(() => setParticles([]), 1200);
   };
 
   return (
@@ -52,15 +56,14 @@ function MemberCard({ name, role, emoji, image }: { name: string; role: string; 
       {particles.map((p) => (
         <span
           key={p.id}
-          className="absolute text-2xl transition-all duration-1000 opacity-0"
+          className="absolute text-2xl animate-confetti"
           style={{
             left: "50%",
             top: "50%",
             transform: `translate(-50%, -50%) translate(${p.x}px, ${p.y}px) rotate(${p.rotation}deg)`,
-            opacity: 1,
           }}
         >
-          {emoji}
+          {p.emoji}
         </span>
       ))}
     </div>

@@ -49,3 +49,18 @@
 .cards .red { background-color: #f43f5e; }
 .cards .blue { background-color: #3b82f6; }
 .cards .green { background-color: #22c55e; }
+
+@keyframes confetti {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+}
+
+.animate-confetti {
+  animation: confetti 1.2s ease-out forwards;
+}
