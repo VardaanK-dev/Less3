@@ -50,6 +50,15 @@
 .cards .blue { background-color: #3b82f6; }
 .cards .green { background-color: #22c55e; }
 
+/* Emoji particle explosion */
+.emoji-particle {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  font-size: 1.5rem;
+  pointer-events: none;
+}
+
 @keyframes confetti {
   0% {
     opacity: 1;
@@ -57,7 +66,7 @@
   }
   100% {
     opacity: 0;
-    transform: translate(-50%, -50%) scale(0.5);
+    transform: translate(calc(-50% + var(--x)), calc(-50% + var(--y))) scale(0.5);
   }
 }
 
