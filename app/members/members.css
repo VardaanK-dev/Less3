@@ -45,11 +45,6 @@
   transform: scale(0.95);
 }
 
-/* optional background colors */
-.cards .red { background-color: #f43f5e; }
-.cards .blue { background-color: #3b82f6; }
-.cards .green { background-color: #22c55e; }
-
 /* Emoji particle explosion */
 .emoji-particle {
   position: absolute;
