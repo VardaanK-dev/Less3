@@ -16,7 +16,7 @@ export default function ShowcasePage() {
       title: "APJ Abdul Kalam",
       file: "assets/APJ Abdul Kalam.pptx",
       image: "/assets/A.P.J ABDUL KALAM.png",
-      type: "Download", // external preview
+      type: "download", // external preview
     },
     {
       title: "Mark Zuckerberg Chart",
