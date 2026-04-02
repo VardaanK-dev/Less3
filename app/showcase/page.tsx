@@ -38,9 +38,9 @@ export default function ShowcasePage() {
     },
     {
       title: "APJ Abdul Kalam Chart",
-      image: "/assets/APJ Abdul Kalam.jpeg",
+      image: "/assets/APJ Abdul Kalam chart.jpeg",
       type: "preview", // chart image only
-      previewUrl: "/assets/APJ Abdul Kalam.jpeg",
+      previewUrl: "/assets/APJ Abdul Kalam chart.jpeg",
     },
     {
       title: "Mark Zuckerberg Box art-work",
