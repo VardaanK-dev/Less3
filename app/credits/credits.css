@@ -24,6 +24,42 @@
   flex: 1 1 100px;
   min-width: 100px; /* ensures items don’t shrink too much */
 }
+.credit-item img:hover {
+  transform: scale(1.1);
+}
+
+/* Brand-specific hover glows */
+.credit-item.github img:hover {
+  box-shadow: 0 0 12px rgba(36, 41, 46, 0.8); /* GitHub dark gray */
+}
+
+.credit-item.vercel img:hover {
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.8); /* Vercel black */
+}
+
+.credit-item.flowbite img:hover {
+  box-shadow: 0 0 12px rgba(59, 130, 246, 0.8); /* Flowbite blue */
+}
+
+.credit-item.uiverse img:hover {
+  box-shadow: 0 0 12px rgba(255, 0, 150, 0.8); /* UI Verse pink/purple */
+}
+
+.credit-item.copilot img:hover {
+  box-shadow: 0 0 12px rgba(0, 120, 212, 0.8); /* Copilot blue */
+}
+
+.credit-item.nodejs img:hover {
+  box-shadow: 0 0 12px rgba(83, 160, 72, 0.8); /* Node.js green */
+}
+
+.credit-item.nextjs img:hover {
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.8); /* Next.js black */
+}
+
+.credit-item.react img:hover {
+  box-shadow: 0 0 12px rgba(97, 218, 251, 0.8); /* React cyan */
+}
 
 .credit-item img {
   width: 70px;
