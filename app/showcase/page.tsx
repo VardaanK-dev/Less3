@@ -36,6 +36,18 @@ export default function ShowcasePage() {
       image: "/assets/Merged(Less3).png", // thumbnail
       type: "download",
     },
+    {
+      title: "APJ Abdul Kalam Chart",
+      image: "/assets/APJ Abdul Kalam.jpeg",
+      type: "preview", // chart image only
+      previewUrl: "/assets/APJ Abdul Kalam.jpeg",
+    },
+    {
+      title: "Mark Zuckerberg Box art-work",
+      image: "/assets/Mark Zuckerberg Box.jpeg",
+      type: "preview", // chart image only
+      previewUrl: "/assets/Mark Zuckerberg Box.jpeg",
+    },
   ];
 
   const filtered = assets.filter((a) =>
